@@ -56,7 +56,7 @@
 
 ---
 
-## 四、补充资源（5 项，用户追加）
+## 四、补充资源（6 项，用户追加）
 
 | # | 名称 | 网址 | 一句话说明 |
 |---|------|------|-----------|
@@ -65,6 +65,7 @@
 | 3 | Shader（Flux Pic） | https://shaders.fluxpic.com | 可视化 Shader 效果生成器（墨滴 / 光晕 / 背景等），支持上传 PNG / JPG / SVG（含 logo）预览液态金属、半色调、滤镜等效果 |
 | 4 | Open Design | https://open-design.ai | 开源 vibe design workspace，Claude Design 的开源替代，用自己的 coding agent 做原型 / 落地页 / 仪表盘 / Slides / HTML 视频（另：opendesign.cc 是同类网页设计资源库，可下载完整设计系统） |
 | 5 | HyperFrames | https://github.com/heygen-com/hyperframes | HeyGen 开源的 HTML 视频渲染框架——「写 HTML，渲染视频」，原生为 AI Agent 设计（GSAP + Puppeteer + FFmpeg），可生成确定性 MP4；社区已衍生多个 Agent Skill（如 hyperframes-motion-director） |
+| 6 | OriginKit | https://www.originkit.dev | 免费动效组件库（Beta）：60+ 可定制动画组件（文本 / 图库 / 交互三大类），Mesh Text Hover、Gravity Gallery、Particle Sphere 等高装饰性动效，支持 React 与 Framer 复制即用，并提供 MCP 供 Cursor / Claude 等 AI 工具直接接入 |
 
 > 补充：SuperOPC 的 Logo 动效工具基于开源 **Paper Shader** 构建；若你说的「shader」特指 Paper Shader 项目本身，可与本表第 3 项的 Flux Pic 配合使用。
 
