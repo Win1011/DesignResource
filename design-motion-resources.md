@@ -18,7 +18,7 @@
 
 ---
 
-## 二、AI 设计 / 动效 Skills（10 个）
+## 二、AI 设计 / 动效 Skills（11 个）
 
 | # | 名称 | 来源（GitHub） | 一句话说明 |
 |---|------|----------------|-----------|
@@ -32,6 +32,7 @@
 | 8 | GSAP Skill（官方） | github.com/greensock/gsap-skills | 官方 GSAP AI 技能，教 agent 正确使用 core / timeline / ScrollTrigger / React·Vue·Svelte |
 | 9 | Web to Design MD | github.com/Paidax01/web-to-design-md | 把任意在线网站提取成可复用的 design.md 设计规范 + HTML 预览 |
 | 10 | Remotion Skill | github.com/wshuyi/remotion-video-skill | 用自然语言驱动 Remotion 框架生成编程式视频（React 写视频） |
+| 11 | Motion Design Director | github.com/liangming99/motion-design-director-skill | 动效设计「导演级」技能包：高标准动效指导、术语规范、方案批评与 HTML 动效草图，给 agent 注入专业动效审美 |
 
 > 安装方式（WorkBuddy 为例）：把仓库里的 `SKILL.md`（及 `scripts/`）放到 `~/.workbuddy/skills/<技能名>/`，重启或新开会话即生效。
 > Claude Code → `~/.claude/skills/`；Cursor → `~/.cursor/skills/`.
@@ -55,7 +56,7 @@
 
 ---
 
-## 四、补充资源（4 项，用户追加）
+## 四、补充资源（5 项，用户追加）
 
 | # | 名称 | 网址 | 一句话说明 |
 |---|------|------|-----------|
@@ -63,6 +64,7 @@
 | 2 | Paper | https://paper.design | 为 AI 时代打造的画布式设计工具（设计 / 分享 / 发布），可直接粘贴网页组件为可编辑图层，支持 macOS / Windows |
 | 3 | Shader（Flux Pic） | https://shaders.fluxpic.com | 可视化 Shader 效果生成器（墨滴 / 光晕 / 背景等），支持上传 PNG / JPG / SVG（含 logo）预览液态金属、半色调、滤镜等效果 |
 | 4 | Open Design | https://open-design.ai | 开源 vibe design workspace，Claude Design 的开源替代，用自己的 coding agent 做原型 / 落地页 / 仪表盘 / Slides / HTML 视频（另：opendesign.cc 是同类网页设计资源库，可下载完整设计系统） |
+| 5 | HyperFrames | https://github.com/heygen-com/hyperframes | HeyGen 开源的 HTML 视频渲染框架——「写 HTML，渲染视频」，原生为 AI Agent 设计（GSAP + Puppeteer + FFmpeg），可生成确定性 MP4；社区已衍生多个 Agent Skill（如 hyperframes-motion-director） |
 
 > 补充：SuperOPC 的 Logo 动效工具基于开源 **Paper Shader** 构建；若你说的「shader」特指 Paper Shader 项目本身，可与本表第 3 项的 Flux Pic 配合使用。
 
