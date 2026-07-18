@@ -1,9 +1,9 @@
 ---
 title: 设计、动效与 AI 前端资源目录
-version: "2.0"
-updated_at: "2026-07-14"
+version: "2.1"
+updated_at: "2026-07-18"
 language: zh-CN
-entry_count: 35
+entry_count: 36
 catalog_type: design-motion-ai-resources
 ---
 
@@ -51,6 +51,9 @@ catalog_type: design-motion-ai-resources
 | INS-003 | [Bento Grids](https://bentogrids.com) | 布局灵感库 | 查找 Bento 网格、卡片组合和信息层级 | 让 AI 提取布局规律，而不是照搬单个页面 | `inspiration` `gallery` `design-system` |
 | INS-004 | [Godly / Recent](https://recent.design) | 网站灵感画廊 | 浏览高质量营销网站和数字产品案例 | 用作风格检索与案例对比，避免直接复刻 | `inspiration` `gallery` |
 | INS-005 | [Awwwards](https://www.awwwards.com) | 设计奖项与案例平台 | 研究行业级网页设计、交互和创意方向 | 让 AI 总结多个案例的共同设计原则 | `inspiration` `gallery` `motion-design` |
+| INS-006 | [Website Prompts](https://websiteprompts.ai) | Web Prompt 库 | 浏览按行业/站点类型整理的完整网页 Prompt，复制后用于 Lovable、Bolt、v0、Claude 等 | 按目标页面类型检索 Prompt，再交给 AI 生成或改写落地页 | `inspiration` `prompt` |
+
+> 若你要找的是「每个网页案例旁边都能复制结构化设计 Prompt」的灵感库，库内已有 [MotionSites](https://motionsites.ai)（`INS-001`）。`INS-006` 更偏免费、按业务类型归档的纯 Prompt 文案库；两者可并存选用。
 
 ---
 
@@ -190,5 +193,6 @@ catalog_type: design-motion-ai-resources
 
 ## 更新记录
 
+- **2026-07-18 · v2.1**：新增 `INS-006` Website Prompts（Web Prompt 库）；与已有 `INS-001` MotionSites 区分用途。
 - **2026-07-14 · v2.0**：重新按任务分类；增加稳定 ID、AI 使用规则、标签词表和贡献规范；加入 Jitter；移除容易过时的数量与绝对化表述。
 - **2026-07-10 · v1.0**：创建初始资源清单。
