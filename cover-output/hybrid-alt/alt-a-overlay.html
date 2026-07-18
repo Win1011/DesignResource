@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Alt A · Overlay Poster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #111; display: flex; justify-content: center; padding: 40px; }
+    .poster {
+      width: 1080px; height: 1440px;
+      position: relative; overflow: hidden;
+      background: #0e0e0e;
+      font-family: "Noto Sans SC", sans-serif;
+    }
+    /* full-bleed collage — NOT swiss grid */
+    .bg {
+      position: absolute; inset: 0;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6px;
+      padding: 6px;
+    }
+    .bg img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      filter: saturate(1.05) contrast(1.05);
+    }
+    .bg .tall { grid-row: 1 / -1; }
+    .veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8,8,8,.15) 0%, rgba(8,8,8,.25) 42%, rgba(8,8,8,.88) 72%, rgba(8,8,8,.96) 100%);
+    }
+    .content {
+      position: absolute; left: 56px; right: 56px; bottom: 64px;
+      color: #f5f2ea;
+      z-index: 2;
+    }
+    .brand {
+      font-size: 18px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(245,242,234,.7);
+      margin-bottom: 28px;
+    }
+    .title {
+      font-family: "Instrument Serif", "Noto Sans SC", Georgia, serif;
+      font-weight: 400;
+      font-size: 108px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .title .mute { color: rgba(245,242,234,.88); }
+    .title .kw {
+      color: #ff5c1a;
+      font-style: italic;
+      display: inline-block;
+      transform: rotate(-2deg);
+      text-shadow: 0 2px 0 rgba(0,0,0,.45);
+    }
+    .bar {
+      margin-top: 32px;
+      width: 72px; height: 6px;
+      background: #ff5c1a;
+    }
+    .lead {
+      margin-top: 28px;
+      font-size: 28px;
+      line-height: 1.45;
+      color: rgba(245,242,234,.78);
+      max-width: 780px;
+      font-weight: 400;
+    }
+    .foot {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245,242,234,.55);
+    }
+    .foot b { color: #ff5c1a; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <section class="poster" id="cover">
+    <div class="bg">
+      <img class="tall" src="assets/shot-reactbits.png" alt="">
+      <img src="assets/shot-shader.png" alt="">
+      <img src="assets/shot-awwwards.png" alt="">
+    </div>
+    <div class="veil"></div>
+    <div class="content">
+      <p class="brand">Design Resource</p>
+      <h1 class="title">
+        <span class="mute">AI 的</span><br>
+        <span class="kw">设计灵感库</span>
+      </h1>
+      <div class="bar"></div>
+      <p class="lead">告诉 AI 该看哪、该用哪</p>
+      <div class="foot">
+        <span><b>INS</b> · CMP · MOT · SKL</span>
+        <span>36 entries</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
