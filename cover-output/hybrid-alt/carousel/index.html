@@ -69,7 +69,7 @@
     .giant .soft { color: #f4f1ea; font-weight: 300; }
     .title-h {
       margin-top: 56px;
-      font-size: 58px;
+      font-size: 54px;
       font-weight: 900;
       line-height: 1.15;
       letter-spacing: -0.02em;
@@ -154,7 +154,7 @@
       margin-bottom: 12px;
     }
     .row h3 {
-      font-size: 38px;
+      font-size: 36px;
       font-weight: 900;
       line-height: 1.15;
       color: #111;
@@ -198,6 +198,57 @@
       line-height: 1.2;
       text-align: right;
     }
+
+    /* page 04 dual scenario */
+    .dual {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      min-width: 0;
+    }
+    .scenario {
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .scenario.a {
+      background: #f3f1eb;
+      color: #111;
+      border-bottom: 4px solid #111;
+    }
+    .scenario.b {
+      background: #111;
+      color: #f4f1ea;
+    }
+    .scenario .tag {
+      font-size: 16px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .scenario.a .tag { color: #ff5c1a; }
+    .scenario.b .tag { color: #ff5c1a; }
+    .scenario h3 {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .scenario.b h3 em {
+      font-style: normal;
+      color: #ff5c1a;
+    }
+    .scenario p {
+      font-size: 26px;
+      line-height: 1.45;
+      font-weight: 300;
+      max-width: 520px;
+    }
+    .scenario.a p { color: #444; }
+    .scenario.b p { color: rgba(244,241,234,.75); }
+
     .close-well {
       background: #111;
       color: #f4f1ea;
@@ -207,7 +258,7 @@
       justify-content: space-between;
     }
     .close-well .big {
-      font-size: 52px;
+      font-size: 48px;
       font-weight: 900;
       line-height: 1.2;
     }
@@ -240,7 +291,7 @@
       margin-bottom: 12px;
     }
     .close-list .item .txt {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 500;
       line-height: 1.35;
     }
@@ -269,8 +320,8 @@
         <span class="soft">AI的</span><span class="kw">设计灵感库</span>
       </h1>
       <div class="bottom-copy">
-        <p>给人和 AI 都能用的<br>设计资源目录</p>
-        <div class="num">30+<span>resources</span></div>
+        <p>交给你的 AI<br>让它自己会选型</p>
+        <div class="num">30+<span>for agents</span></div>
       </div>
     </aside>
     <div class="shots">
@@ -295,28 +346,28 @@
       <p class="eyebrow">Design Resource</p>
       <p class="page-no">02 / What</p>
       <h2 class="title-h">
-        <span class="soft">一份纯</span><br>
-        <span class="kw">设计资源目录</span>
+        <span class="soft">给 Agent 读的</span><br>
+        <span class="kw">设计目录</span>
       </h2>
       <div class="bottom-copy">
-        <p>灵感 · 组件 · 动效<br>动画 · 规范</p>
+        <p>不是收藏夹<br>是选型系统</p>
       </div>
     </aside>
     <div class="well">
       <div class="row">
         <div class="idx">01</div>
-        <h3>只收设计相关</h3>
-        <p>灵感站、组件库、动效工具、前端动画、设计规范，不混进别的。</p>
+        <h3>专为 AI 工作流整理</h3>
+        <p>给人看懂，更给 Agent 调用——按任务选资源，不瞎推。</p>
       </div>
       <div class="row">
         <div class="idx">02</div>
-        <h3>写清适合做什么</h3>
-        <p>每条都标明用途，以及要不要写代码。</p>
+        <h3>类型分开放</h3>
+        <p>灵感 / 组件 / 动效 / 动画 / 规范分开，避免混成一锅。</p>
       </div>
       <div class="row">
         <div class="idx">03</div>
-        <h3>人和 AI 都能用</h3>
-        <p>按分类取用；丢给 AI 时也更清楚该看哪一类。</p>
+        <h3>写清怎么用</h3>
+        <p>每条标明适合做什么、要不要写代码，方便 AI 判断。</p>
       </div>
     </div>
   </section>
@@ -328,10 +379,10 @@
       <p class="page-no">03 / Map</p>
       <h2 class="title-h">
         <span class="soft">五大类</span><br>
-        <span class="kw">按需翻</span>
+        <span class="kw">AI 按需取</span>
       </h2>
       <div class="bottom-copy">
-        <p>先选任务<br>再挑资源</p>
+        <p>先定任务<br>再让它选</p>
         <div class="num">30+<span>entries</span></div>
       </div>
     </aside>
@@ -346,46 +397,41 @@
     </div>
   </section>
 
-  <!-- 04 HOW -->
+  <!-- 04 TWO MODES -->
   <section class="poster" id="xhs-04">
     <aside class="panel">
       <p class="eyebrow">Design Resource</p>
-      <p class="page-no">04 / How</p>
+      <p class="page-no">04 / Modes</p>
       <h2 class="title-h">
-        <span class="soft">这样用</span><br>
-        <span class="kw">就行</span>
+        <span class="soft">有没有参考</span><br>
+        <span class="kw">都行</span>
       </h2>
       <div class="bottom-copy">
-        <p>每次挑<br>1–3 个就够</p>
+        <p>把库丢给它<br>两种都稳</p>
       </div>
     </aside>
-    <div class="well">
-      <div class="row">
-        <div class="idx">Step 01</div>
-        <h3>先想清楚要解决什么</h3>
-        <p>找参考 / 找组件 / 做动效 / 查规范。</p>
+    <div class="dual">
+      <div class="scenario a">
+        <div class="tag">Mode A · 有参考</div>
+        <h3>有想法、有意向</h3>
+        <p>把参考 / 意向 + 这份库一起丢给 AI。它对方向、选资源，少跑偏，落地更稳。</p>
       </div>
-      <div class="row">
-        <div class="idx">Step 02</div>
-        <h3>进对应分类</h3>
-        <p>挑 1–3 个就够，别一次塞一堆。</p>
-      </div>
-      <div class="row">
-        <div class="idx">Step 03</div>
-        <h3>打开链接用</h3>
-        <p>要给 AI 时，把分类或条目一起丢过去。</p>
+      <div class="scenario b">
+        <div class="tag">Mode B · 没参考</div>
+        <h3>没有参考也<em>行</em></h3>
+        <p>只丢需求 + 这份库。它按分类自己选型，你可以放心交给它生成。</p>
       </div>
     </div>
   </section>
 
-  <!-- 05 SUMMARY -->
+  <!-- 05 WHEN -->
   <section class="poster" id="xhs-05">
     <aside class="panel">
       <p class="eyebrow">Design Resource</p>
       <p class="page-no">05 / When</p>
       <h2 class="title-h">
         <span class="soft">什么时候</span><br>
-        <span class="kw">打开它</span>
+        <span class="kw">丢给 AI</span>
       </h2>
       <div class="bottom-copy">
         <p>对上任务<br>再动手</p>
@@ -393,23 +439,23 @@
     </aside>
     <div class="close-well">
       <div>
-        <p class="big">不知道去哪找？<br><em>按这个打开。</em></p>
+        <p class="big">不确定让它看哪？<br><em>按这个丢。</em></p>
         <div class="close-list">
           <div class="item">
             <div class="lab">01</div>
-            <div class="txt">不知道网页往哪走 → 看 <b>INS</b></div>
+            <div class="txt">不知道网页方向 → 让它看 <b>INS</b></div>
           </div>
           <div class="item">
             <div class="lab">02</div>
-            <div class="txt">缺组件 / 动效 → 看 <b>CMP / MOT</b></div>
+            <div class="txt">缺组件 / 动效 → 让它看 <b>CMP / MOT</b></div>
           </div>
           <div class="item">
             <div class="lab">03</div>
-            <div class="txt">要落地动画或规范 → 看 <b>DEV / SYS</b></div>
+            <div class="txt">要落地动画或规范 → 让它看 <b>DEV / SYS</b></div>
           </div>
         </div>
       </div>
-      <p class="close-foot">Design Resource · 30+ curated</p>
+      <p class="close-foot">Design Resource · For Your Agent</p>
     </div>
   </section>
 
