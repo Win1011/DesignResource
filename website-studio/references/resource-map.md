@@ -41,12 +41,12 @@
 
 | 网站类型 | 默认栈 | 核心板块 | 动效重点 |
 |---------|--------|---------|---------|
-| 落地页/产品页 | Next.js + Tailwind + shadcn | Hero → 特性 → 展示 → 社会证明 → CTA → Footer | Hero 抓眼 + 滚动叙事 |
-| 作品集 | Next.js 或单文件 HTML | Hero → 精选项目 → 关于 → 联系 | 项目卡片交互 + 横向滚动 |
+| 落地页/产品页 | Vite + React + Tailwind + shadcn | Hero → 特性 → 展示 → 社会证明 → CTA → Footer | Hero 抓眼 + 滚动叙事 |
+| 作品集 | Vite + React 或单文件 HTML | Hero → 精选项目 → 关于 → 联系 | 项目卡片交互 + 横向滚动 |
 | 仪表盘 | Next.js + shadcn | 侧栏 → 概览 → 图表 → 表格 → 详情 | 数据计数 + 加载骨架 + 微交互 |
 | 博客 | Next.js (MDX) | 文章列表 → 文章 → 关于 | 克制：阅读体验优先，动效退后 |
 | 电商 | Next.js + shadcn | Hero → 商品网格 → 详情 → 购物车 | 商品图 hover + Marquee 推荐 + 加购反馈 |
-| 活动页 | 单文件 HTML 或 Next.js | Hero(倒计时) → 嘉宾 → 议程 → 报名 | 倒计时 + 粒子背景 + 滚动揭示 |
+| 活动页 | Vite + React 或单文件 HTML | Hero(倒计时) → 嘉宾 → 议程 → 报名 | 倒计时 + 粒子背景 + 滚动揭示 |
 | 文档站 | Next.js (MDX) | 侧栏目录 → 正文 → 导航 | 极简，几乎无动效 |
 
 ## 四、灵感与资源网站

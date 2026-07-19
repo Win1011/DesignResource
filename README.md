@@ -1,6 +1,6 @@
 ---
 title: 设计、动效与 AI 前端资源目录
-version: "3.3"
+version: "3.4"
 updated_at: "2026-07-19"
 language: zh-CN
 entry_count: 47
@@ -14,6 +14,12 @@ catalog_type: design-resources
 > **范围说明**:本目录收录**设计资源**(灵感站、组件库、动效工具、前端技术、设计系统参考)与 **AI Skill**(设计提取、动效编码、视频生成等能力扩展)。旗舰 skill `website-studio`(本仓库维护)见 [Skills 分类](#六ai-设计与动效-skills)顶部。
 
 > 本目录提供"发现与选型",不等同于对价格、许可证、安全性或长期可用性的背书。使用前请查看资源官方说明;安装第三方依赖前请审查其文档、许可证与权限。
+
+## 如何使用本仓库
+
+- **查资源**:按下方"快速导航"选分类,或用"决策树"按"我要做什么"查。每条资源带字段化详情(用途 / 输入输出 / 是否写码 / 框架 / 许可证 / 何时选 / 搭配)。
+- **装旗舰 skill**:把 `website-studio/` 目录整个拷到你的 agent skills 目录(Claude Code: `~/.claude/skills/`;Codex: `$CODEX_HOME/skills/`;Cursor: `~/.cursor/skills/`;其他工具见其文档),即可在建站时自动调用。
+- **给 AI 用**:把本 README 喂给 agent,它能按决策树和字段直接选型;`website-studio/SKILL.md` 含完整建站方法论,agent 加载后可跑六阶段流程。
 
 ## 快速导航
 
@@ -44,6 +50,7 @@ catalog_type: design-resources
 
 | 我想要… | 首选 | 备选 |
 |---|---|---|
+| 从零做一个网站 / 落地页 | website-studio(首选) | 见 INS-* 找方向 |
 | 找整页 / Hero 视觉方向 | INS-001 MotionSites | INS-004 / INS-005 / INS-006 |
 | 看策展级网站合集 | INS-006 Siteinspire | INS-005 Awwwards |
 | 看滚动 / 复杂动效真实案例 | INS-002 Made with GSAP | INS-005 Awwwards |
@@ -538,7 +545,7 @@ catalog_type: design-resources
 - **输入 → 输出**: 一句话需求 + 可选参考 → 可上线的网页成品 + DESIGN.md
 - **是否需写码**: 否(agent 全权决策工程,用户只参与审美)
 - **框架兼容**: Vite / Next.js + React + Tailwind 为主,可适配单文件 HTML
-- **许可证 / 价格**: 免费(以仓库 LICENSE 为准)
+- **许可证 / 价格**: 免费(MIT,见仓库 `LICENSE` 文件)
 - **何时选它**: 用户要做任何网页类产物(网站 / 落地页 / 作品集 / 仪表盘 / 活动页)时,首选此 skill
 - **搭配**: 内部 `resource-map.md` 指向本目录资源;配 SKL-001 / SKL-009 做设计提取
 - **标签**: `agent-skill` `motion-design` `design-system`
@@ -775,6 +782,7 @@ catalog_type: design-resources
 
 ## 更新记录
 
+- **2026-07-19 · v3.4**:加 MIT `LICENSE` 文件(原无协议,公开仓库默认 All Rights Reserved,与旗舰 skill"免费"声明矛盾);修复 `website-studio/SKILL.md` 框架矛盾(技术栈默认值与丰富度等级的 Next.js / Vite 不一致,统一为:Vite+React 用于 L2/L3 交互型落地页/作品集/活动页,Next.js 用于多路由内容站;`resource-map.md` 第三节栈列同步);SKILL.md 资源引用段加指向 `../README.md` 的入口 + 工具依赖降级说明(agent-browser/preview 缺失时怎么办);README 加"如何使用本仓库"人视角说明;决策树加顶层"从零做一个网站 → website-studio"入口。
 - **2026-07-19 · v3.3**:恢复 Skills 分类(原 v3.0 移除的 14 条外部 skill 全部回归,链接已核验有效);旗舰 skill `website-studio` 作为"推荐首选"置顶 Skills 分类,完整文件打包进 `website-studio/` 子目录(克隆即用);范围说明、导航、标签词表、决策树同步更新;skill 内部 `resource-map.md` 去重,灵感站列表改为指向上级 README;条目总数 32 → 47。
 - **2026-07-19 · v3.2**:新增 CMP-011 1001 Free Fonts(海量免费字体下载库,个人免费、商用需购许可),与 CMP-010 Fontshare(免费商用)区分定位;决策树同步加"海量字体浏览 / 个人下载"行;条目总数 31 → 32。
 - **2026-07-19 · v3.1**:新增 10 条高质量资源,补齐策展灵感、Web Prompt、基础组件、图标字体、Rive / Spline、GSAP、Mobbin 等缺口;决策树与工作流同步更新;修复 MotionSites 用途字段乱码;条目总数 21 → 31。
