@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Board — {{PROJECT_NAME}}</title>
+<style>
+  :root{
+    --bg: #0a0a0f;
+    --surface: #13131c;
+    --border: #272736;
+    --text: #e8e8f0;
+    --muted: #8b8ba0;
+    --primary: {{COLOR_PRIMARY}};
+    --accent: {{COLOR_ACCENT}};
+    --surface-1: {{COLOR_SURFACE}};
+    --text-1: {{COLOR_TEXT}};
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:{{FONT_BODY}},-apple-system,system-ui,sans-serif;line-height:1.6;padding:40px 24px;}
+  .wrap{max-width:1040px;margin:0 auto;}
+  header{padding:40px 0 32px;border-bottom:1px solid var(--border);margin-bottom:40px;}
+  h1{font-size:42px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;}
+  .meta{color:var(--muted);font-size:15px;}
+  .mood{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+  .chip{background:var(--surface);border:1px solid var(--border);padding:5px 12px;border-radius:999px;font-size:13px;}
+  section{margin-bottom:48px;}
+  h2{font-size:20px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  h2::before{content:'';display:inline-block;width:6px;height:22px;border-radius:3px;background:var(--primary);}
+  .palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;}
+  .color{aspect-ratio:1.8;background:var(--c);border-radius:12px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 4px 20px -8px rgba(0,0,0,.4);}
+  .color.dark{color:#fff;}
+  .color.light{color:#0a0a0f;}
+  .color-name{font-size:12px;font-weight:600;opacity:.8;}
+  .color-hex{font-family:ui-monospace,SFMono-Regular,monospace;font-size:13px;}
+  .type-sample{margin-bottom:18px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;}
+  .type-sample h3{margin:0 0 4px;font-size:inherit;}
+  .type-spec{font-size:12px;color:var(--muted);font-family:ui-monospace,monospace;}
+  .spacing-row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;}
+  .space-item{display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .space-bar{background:var(--primary);border-radius:4px;opacity:.8;}
+  .space-label{font-size:11px;color:var(--muted);font-family:monospace;}
+  .components{display:grid;gap:16px;}
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:16px;padding:24px;}
+  .hero-title{font-family:{{FONT_DISPLAY}},{{FONT_BODY}};font-size:{{SIZE_HERO}};font-weight:{{WEIGHT_HERO}};line-height:1.05;letter-spacing:-0.02em;margin-bottom:12px;}
+  .hero-sub{color:var(--muted);font-size:{{SIZE_BODY_L}};max-width:560px;}
+  .btn{display:inline-block;background:var(--primary);color:{{COLOR_TEXT_ON_PRIMARY}};padding:12px 24px;border-radius:8px;font-weight:600;text-decoration:none;margin-top:12px;}
+  .btn-sec{display:inline-block;border:1px solid var(--border);color:var(--text);padding:11px 23px;border-radius:8px;text-decoration:none;margin-left:8px;}
+  .principles{font-size:15px;color:var(--muted);line-height:1.8;}
+  .principles li{margin:8px 0;}
+  footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;}
+  @media(max-width:640px){.hero-title{font-size:36px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>{{PROJECT_NAME}}</h1>
+    <div class="meta">Design System 设计板 · 审美方向确认</div>
+    <div class="mood">
+      {{MOOD_CHIPS}}
+    </div>
+  </header>
+
+  <section>
+    <h2>色彩令牌</h2>
+    <div class="palette">
+      <div class="color dark" style="--c:{{COLOR_PRIMARY}}"><span class="color-name">Primary</span><span class="color-hex">{{COLOR_PRIMARY}}</span></div>
+      <div class="color dark" style="--c:{{COLOR_ACCENT}}"><span class="color-name">Accent</span><span class="color-hex">{{COLOR_ACCENT}}</span></div>
+      <div class="color {{COLOR_SURFACE_LIGHT_DARK}}" style="--c:{{COLOR_SURFACE}}"><span class="color-name">Surface</span><span class="color-hex">{{COLOR_SURFACE}}</span></div>
+      <div class="color {{COLOR_TEXT_LIGHT_DARK}}" style="--c:{{COLOR_TEXT}}"><span class="color-name">Text</span><span class="color-hex">{{COLOR_TEXT}}</span></div>
+      <div class="color dark" style="--c:{{COLOR_BACKGROUND}}"><span class="color-name">Background</span><span class="color-hex">{{COLOR_BACKGROUND}}</span></div>
+      <div class="color {{COLOR_BORDER_LIGHT_DARK}}" style="--c:{{COLOR_BORDER}}"><span class="color-name">Border</span><span class="color-hex">{{COLOR_BORDER}}</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>字体层级</h2>
+    <div class="type-sample">
+      <h3 class="hero-title" style="font-size:{{SIZE_HERO}}">Hero Display</h3>
+      <div class="type-spec">{{FONT_DISPLAY}} · {{SIZE_HERO}} · {{WEIGHT_HERO}}</div>
+    </div>
+    <div class="type-sample">
+      <h3 style="font-size:{{SIZE_H1}};font-weight:{{WEIGHT_H1}};font-family:{{FONT_HEADING}}">Section Heading H1</h3>
+      <div class="type-spec">{{FONT_HEADING}} · {{SIZE_H1}} · {{WEIGHT_H1}}</div>
+    </div>
+    <div class="type-sample">
+      <p style="font-size:{{SIZE_BODY}};font-family:{{FONT_BODY}}">Body text paragraph. This shows the main reading experience and line height.</p>
+      <div class="type-spec">{{FONT_BODY}} · {{SIZE_BODY}} · 行高 {{LINE_BODY}}</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>间距尺度</h2>
+    <div class="spacing-row">
+      {{SPACING_BARS}}
+    </div>
+  </section>
+
+  <section>
+    <h2>组件预览</h2>
+    <div class="components">
+      <div class="card">
+        <div class="hero-title">{{HERO_TITLE_TEXT}}</div>
+        <p class="hero-sub">{{HERO_SUB_TEXT}}</p>
+        <div>
+          <a class="btn" href="#">{{CTA_PRIMARY}}</a>
+          <a class="btn-sec" href="#">{{CTA_SECONDARY}}</a>
+        </div>
+      </div>
+      <div class="card" style="max-width:360px;">
+        <h3 style="font-size:{{SIZE_H2}};margin-bottom:8px;">Card Title</h3>
+        <p style="color:var(--muted);font-size:{{SIZE_BODY}};">Card body shows the surface color, border radius, and shadow treatment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>动效原则</h2>
+    <ul class="principles">
+      {{MOTION_PRINCIPLES}}
+    </ul>
+  </section>
+
+  <footer>
+    设计板由 website-studio skill 生成。确认此方向后将进入动效选型和实现阶段。
+  </footer>
+</div>
+</body>
+</html>

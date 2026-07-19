@@ -1,17 +1,17 @@
 ---
 title: 设计、动效与 AI 前端资源目录
-version: "3.2"
+version: "3.3"
 updated_at: "2026-07-19"
 language: zh-CN
-entry_count: 32
+entry_count: 47
 catalog_type: design-resources
 ---
 
 # 设计、动效与 AI 前端资源目录
 
-一份面向设计师、开发者和 AI Agent 的策展型**设计资源目录**,覆盖设计灵感、UI 组件、动效制作工具、前端动画技术与设计规范参考。
+一份面向设计师、开发者和 AI Agent 的策展型**设计资源与 Skill 目录**,覆盖设计灵感、UI 组件、动效制作工具、前端动画技术、设计规范参考,以及 AI 设计与动效 Skill。
 
-> **范围说明**:本目录只收录**设计资源**(灵感站、组件库、动效工具、前端技术、设计系统参考)。Agent Skill(taste-skill、web-to-design-md、GSAP skill 等)不在本目录,设计提取与规范生成能力见各自 Skill 仓库。
+> **范围说明**:本目录收录**设计资源**(灵感站、组件库、动效工具、前端技术、设计系统参考)与 **AI Skill**(设计提取、动效编码、视频生成等能力扩展)。旗舰 skill `website-studio`(本仓库维护)见 [Skills 分类](#六ai-设计与动效-skills)顶部。
 
 > 本目录提供"发现与选型",不等同于对价格、许可证、安全性或长期可用性的背书。使用前请查看资源官方说明;安装第三方依赖前请审查其文档、许可证与权限。
 
@@ -24,6 +24,8 @@ catalog_type: design-resources
 | 制作品牌动效、GIF、Lottie 或视频 | [三、动效设计与视觉制作工具](#三动效设计与视觉制作工具) |
 | 在代码中实现动画或渲染视频 | [四、前端动画与视频技术](#四前端动画与视频技术) |
 | 提取设计规范、研究设计系统或做原型 | [五、设计规范、参考与工作空间](#五设计规范参考与工作空间) |
+| 给 AI Agent 增加设计或动效能力 | [六、AI 设计与动效 Skills](#六ai-设计与动效-skills) |
+| 继续寻找更多 Skills | [七、Skills 生态与发现目录](#七skills-生态与发现目录) |
 
 ## 给 AI Agent 的使用规则
 
@@ -36,7 +38,7 @@ catalog_type: design-resources
 
 ### 标签词表
 
-`inspiration` · `gallery` · `prompt` · `component` · `react` · `animation` · `motion-design` · `lottie` · `video` · `shader` · `design-system` · `design-extraction` · `font` · `icon` · `3d`
+`inspiration` · `gallery` · `prompt` · `component` · `react` · `animation` · `motion-design` · `lottie` · `video` · `shader` · `design-system` · `design-extraction` · `font` · `icon` · `3d` · `agent-skill` · `directory`
 
 ## 决策树:我要做什么,用哪个
 
@@ -74,6 +76,7 @@ catalog_type: design-resources
 | 真实产品设计系统参考 | SYS-001 Refero Styles | 无 |
 | 真实 App / Web 界面与流程 | SYS-003 Mobbin | SYS-001 Refero Styles |
 | 端到端 AI 设计工作空间 | SYS-002 Open Design | 无 |
+| 扩展 agent 设计 / 动效能力 | website-studio(首选) | SKL-* 外部 skill |
 
 ---
 
@@ -523,6 +526,213 @@ catalog_type: design-resources
 
 ---
 
+## 六、AI 设计与动效 Skills
+
+用于扩展 AI Agent 的设计、动效与前端能力。安装路径与兼容性取决于具体工具;不要默认所有 Skill 都能跨平台无修改运行。
+
+### 推荐首选 · website-studio(本仓库维护)
+
+- **位置**: [`./website-studio/SKILL.md`](./website-studio/SKILL.md)(本仓库内置,无需另装)
+- **类型**: 全自动建站方法论 Skill
+- **用途**: 把"我想做个网站"变成有品味、可上线的成品;覆盖意图捕获、参考 DNA 提取、设计文档契约、动效策展、实现与验收六阶段;内置反默认纪律、Hero 构图原型库、丰富度等级、高级感物理层、反廉价黑名单
+- **输入 → 输出**: 一句话需求 + 可选参考 → 可上线的网页成品 + DESIGN.md
+- **是否需写码**: 否(agent 全权决策工程,用户只参与审美)
+- **框架兼容**: Vite / Next.js + React + Tailwind 为主,可适配单文件 HTML
+- **许可证 / 价格**: 免费(以仓库 LICENSE 为准)
+- **何时选它**: 用户要做任何网页类产物(网站 / 落地页 / 作品集 / 仪表盘 / 活动页)时,首选此 skill
+- **搭配**: 内部 `resource-map.md` 指向本目录资源;配 SKL-001 / SKL-009 做设计提取
+- **标签**: `agent-skill` `motion-design` `design-system`
+
+### SKL-001 · Taste Skill
+
+- **位置**: https://github.com/senlindesign/taste-skill
+- **类型**: 设计分析 Skill
+- **用途**: 提取网站的设计令牌和"为什么这么设计"的取舍逻辑,转成可解释的设计 DNA
+- **输入 → 输出**: 网站 URL → 设计令牌 + 取舍说明
+- **是否需写码**: 否
+- **框架兼容**: Agent Skill(见仓库说明)
+- **许可证 / 价格**: 见仓库
+- **何时选它**: Phase 1 要把参考站转成结构化设计 DNA 时
+- **搭配**: 配 SKL-009 产出 DESIGN.md;配 website-studio
+- **标签**: `agent-skill` `design-extraction`
+
+### SKL-002 · Impeccable
+
+- **位置**: https://github.com/pbakaus/impeccable
+- **类型**: 前端设计 Skill 包
+- **用途**: 改善 AI 生成界面的视觉判断与设计语言,在生成或审查前端页面时提供设计约束
+- **输入 → 输出**: 页面或设计意图 → 设计约束 + 审查反馈
+- **是否需写码**: 否(约束层)
+- **框架兼容**: Agent Skill
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 要提升 AI 生成界面的视觉品质、或审查前端设计时
+- **搭配**: 配 website-studio 的反廉价黑名单
+- **标签**: `agent-skill` `design-system`
+
+### SKL-003 · shadcn/ui Skill
+
+- **位置**: https://ui.shadcn.com/docs/skills
+- **类型**: 组件知识 Skill
+- **用途**: 按官方模式使用 shadcn/ui 的组件、模式与最佳实践
+- **输入 → 输出**: 组件需求 → 选型 + 安装 + 组合方式
+- **是否需写码**: 是(组件集成)
+- **框架兼容**: React + Tailwind
+- **许可证 / 价格**: 见官网
+- **何时选它**: 用 shadcn/ui 做基础组件层时
+- **搭配**: 配 CMP-008 shadcn/ui
+- **标签**: `agent-skill` `component` `react`
+
+### SKL-004 · AI Website Clone
+
+- **位置**: https://github.com/nelakay/ai-website-cloner-claudeskill
+- **类型**: 网站复刻 Skill
+- **用途**: 从现有网页提取结构并生成前端实现;用于经授权的页面实现或内部原型,避免侵权复制
+- **输入 → 输出**: 网站 URL → 前端实现代码
+- **是否需写码**: 否(agent 生成)
+- **框架兼容**: 见仓库
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 需要快速复刻某站结构做原型时(注意版权)
+- **搭配**: 配 SKL-001 提取 DNA 再复刻更稳
+- **标签**: `agent-skill` `design-extraction`
+
+### SKL-005 · Guizang Social Card
+
+- **位置**: https://github.com/op7418/guizang-social-card-skill
+- **类型**: 社交视觉 Skill
+- **用途**: 按平台尺寸与内容结构生成社交卡片、封面和动态内容
+- **输入 → 输出**: 文案或主题 → 社交卡片视觉
+- **是否需写码**: 否
+- **框架兼容**: Agent Skill
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 需要生成社交分享卡片或封面时
+- **搭配**: 配 MOT-* 做动态版
+- **标签**: `agent-skill` `motion-design`
+
+### SKL-006 · Pixel2Motion
+
+- **位置**: https://github.com/nolangz/pixel2motion
+- **类型**: Logo 动效 Skill
+- **用途**: 将位图 Logo 转成 SVG 并生成动效预览
+- **输入 → 输出**: 位图 Logo → SVG + 动效预览
+- **是否需写码**: 否
+- **框架兼容**: Agent Skill
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 需要把客户给的位图 Logo 做成动效时
+- **搭配**: 配 MOT-001 Jitter
+- **标签**: `agent-skill` `animation`
+
+### SKL-007 · Text-to-Lottie
+
+- **位置**: https://github.com/diffusionstudio/lottie
+- **类型**: Lottie 生成 Skill / 工具
+- **用途**: 从自然语言生成和预览 Lottie 动画
+- **输入 → 输出**: 自然语言描述 → Lottie JSON + 预览
+- **是否需写码**: 否
+- **框架兼容**: Agent Skill
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 需要快速生成矢量动画、不想手画 Lottie 时
+- **搭配**: 配 MOT-005 LottieFiles 校验
+- **标签**: `agent-skill` `lottie`
+
+### SKL-008 · GSAP Skill(官方)
+
+- **位置**: https://github.com/greensock/gsap-skills
+- **类型**: GSAP 编码 Skill
+- **用途**: 使用 GSAP、Timeline 和 ScrollTrigger 实现网页动效;为 agent 提供官方动画模式与框架集成指导
+- **输入 → 输出**: 动效需求 → GSAP 代码
+- **是否需写码**: 是
+- **框架兼容**: 框架无关(GSAP 原生 JS)
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 用 DEV-003 GSAP 做复杂动画时,加载此 skill 给 agent 官方模式
+- **搭配**: 配 DEV-003 GSAP;配 INS-002 案例
+- **标签**: `agent-skill` `animation`
+
+### SKL-009 · Web to Design MD
+
+- **位置**: https://github.com/Paidax01/web-to-design-md
+- **类型**: 设计提取 Skill
+- **用途**: 将网页整理成可复用的 DESIGN.md 与预览
+- **输入 → 输出**: 网站 URL → DESIGN.md + 预览
+- **是否需写码**: 否
+- **框架兼容**: Agent Skill
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 要把视觉参考转成结构化设计规范时
+- **搭配**: 配 SKL-001;配 website-studio Phase 2
+- **标签**: `agent-skill` `design-extraction`
+
+### SKL-010 · Remotion Skill
+
+- **位置**: https://github.com/wshuyi/remotion-video-skill
+- **类型**: 编程视频 Skill
+- **用途**: 使用 React 和 Remotion 生成视频;让 agent 编写场景、时间线和渲染流程
+- **输入 → 输出**: 视频需求 → Remotion 场景代码 + 渲染流程
+- **是否需写码**: 是(React)
+- **框架兼容**: React + Remotion
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 需要编程式视频、且选用 Remotion 而非 HyperFrames 时
+- **搭配**: 配 DEV-002 HyperFrames(另一种视频方案)
+- **标签**: `agent-skill` `video` `react`
+
+### SKL-011 · Motion Design Director
+
+- **位置**: https://github.com/liangming99/motion-design-director-skill
+- **类型**: 动效指导 Skill
+- **用途**: 规划、批评和优化动效方案;让 agent 先制定动效语言和节奏,再生成实现草图
+- **输入 → 输出**: 项目需求 → 动效方案 + 节奏规范 + 草图
+- **是否需写码**: 否(指导层)
+- **框架兼容**: Agent Skill
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 动效方向不清、需要先定语言和节奏再动手时
+- **搭配**: 配 website-studio 的丰富度等级
+- **标签**: `agent-skill` `motion-design`
+
+---
+
+## 七、Skills 生态与发现目录
+
+用于寻找更多 Skill、参考规范或组合式技能包。
+
+### ECO-001 · Anthropic 官方 Skills
+
+- **位置**: https://github.com/anthropics/skills
+- **类型**: 官方 Skill 仓库
+- **用途**: 参考 Agent Skill 的结构和官方示例;让 agent 优先学习权威实现与安全边界
+- **输入 → 输出**: 浏览示例 → Skill 结构参考
+- **是否需写码**: 否(参考)
+- **框架兼容**: Claude 生态
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 学习 Skill 规范、看官方示例时
+- **搭配**: 配 ECO-002 / ECO-003
+- **标签**: `directory` `agent-skill`
+
+### ECO-002 · Claude Design Skillstack
+
+- **位置**: https://github.com/freshtechbro/claudedesignskills
+- **类型**: 设计技能集合
+- **用途**: 获取 3D、WebGL、动效和现代前端相关能力;按任务选取子 Skill
+- **输入 → 输出**: 浏览子 Skill → 按需安装
+- **是否需写码**: 视子 Skill 而定
+- **框架兼容**: Claude 生态
+- **许可证 / 价格**: 见仓库
+- **何时选它**: 需要多个设计相关子 Skill 组合时
+- **搭配**: 按任务选,不要一次加载无关能力
+- **标签**: `directory` `agent-skill` `motion-design`
+
+### ECO-003 · The Skills Directory
+
+- **位置**: https://theskills.directory
+- **类型**: Skill 搜索目录
+- **用途**: 搜索不同生态中的 Agent Skills;用作发现入口
+- **输入 → 输出**: 关键词搜索 → Skill 列表
+- **是否需写码**: 否
+- **框架兼容**: 跨生态
+- **许可证 / 价格**: 免费浏览
+- **何时选它**: 要发现更多 Skill、跨生态搜索时
+- **搭配**: 安装前回到源码仓库审查
+- **标签**: `directory` `agent-skill`
+
+---
+
 ## 推荐工作流
 
 ### 1. 从产品概念到网页
@@ -554,7 +764,7 @@ catalog_type: design-resources
 
 新增资源时:
 
-1. 选择唯一主分类和下一个稳定 ID(沿用现有前缀:INS / CMP / MOT / DEV / SYS)。
+1. 选择唯一主分类和下一个稳定 ID(沿用现有前缀:INS / CMP / MOT / DEV / SYS / SKL / ECO)。
 2. 使用官方主页或官方源码仓库链接。
 3. 描述"适合解决什么问题",避免广告式形容词和易过时的数量。
 4. 明确它是灵感、工具、代码库还是组件库。
@@ -565,6 +775,7 @@ catalog_type: design-resources
 
 ## 更新记录
 
+- **2026-07-19 · v3.3**:恢复 Skills 分类(原 v3.0 移除的 14 条外部 skill 全部回归,链接已核验有效);旗舰 skill `website-studio` 作为"推荐首选"置顶 Skills 分类,完整文件打包进 `website-studio/` 子目录(克隆即用);范围说明、导航、标签词表、决策树同步更新;skill 内部 `resource-map.md` 去重,灵感站列表改为指向上级 README;条目总数 32 → 47。
 - **2026-07-19 · v3.2**:新增 CMP-011 1001 Free Fonts(海量免费字体下载库,个人免费、商用需购许可),与 CMP-010 Fontshare(免费商用)区分定位;决策树同步加"海量字体浏览 / 个人下载"行;条目总数 31 → 32。
 - **2026-07-19 · v3.1**:新增 10 条高质量资源,补齐策展灵感、Web Prompt、基础组件、图标字体、Rive / Spline、GSAP、Mobbin 等缺口;决策树与工作流同步更新;修复 MotionSites 用途字段乱码;条目总数 21 → 31。
 - **2026-07-19 · v3.0**:移除原"六、AI 设计与动效 Skills"与"七、Skills 生态与发现目录"共 14 条,使本目录成为纯设计资源库;保留的 21 条资源全量字段化增强(用途 / 输入输出 / 是否写码 / 框架兼容 / 许可证 / 何时选 / 搭配);新增"我要做什么,用哪个"决策树;合并为单文件 README;重写推荐工作流去除 Skill 依赖。
