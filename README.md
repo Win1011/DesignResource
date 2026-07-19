@@ -1,9 +1,9 @@
 ---
 title: 设计、动效与 AI 前端资源目录
-version: "3.0"
+version: "3.1"
 updated_at: "2026-07-19"
 language: zh-CN
-entry_count: 21
+entry_count: 31
 catalog_type: design-resources
 ---
 
@@ -36,15 +36,18 @@ catalog_type: design-resources
 
 ### 标签词表
 
-`inspiration` · `gallery` · `prompt` · `component` · `react` · `animation` · `motion-design` · `lottie` · `video` · `shader` · `design-system` · `design-extraction`
+`inspiration` · `gallery` · `prompt` · `component` · `react` · `animation` · `motion-design` · `lottie` · `video` · `shader` · `design-system` · `design-extraction` · `font` · `icon` · `3d`
 
 ## 决策树:我要做什么,用哪个
 
 | 我想要… | 首选 | 备选 |
 |---|---|---|
-| 找整页 / Hero 视觉方向 | INS-001 MotionSites | INS-004 / INS-005 |
+| 找整页 / Hero 视觉方向 | INS-001 MotionSites | INS-004 / INS-005 / INS-006 |
+| 看策展级网站合集 | INS-006 Siteinspire | INS-005 Awwwards |
 | 看滚动 / 复杂动效真实案例 | INS-002 Made with GSAP | INS-005 Awwwards |
 | 找 Bento 网格布局 | INS-003 Bento Grids | 无 |
+| 研究微交互 / 细节魔法 | INS-007 Design Spells | INS-002 |
+| 复制网页设计 Prompt | INS-008 Website Prompts | INS-001 MotionSites |
 | Hero 文字逐字 / 分行出场 | CMP-003 React Bits | CMP-005 Aceternity |
 | 卡片 3D 倾斜 / 聚光 | CMP-003 React Bits | CMP-004 Magic UI |
 | 边框流光 / 扫描 | CMP-004 Magic UI | CMP-005 Aceternity |
@@ -54,14 +57,21 @@ catalog_type: design-resources
 | Shader 渐变背景(可集成) | CMP-001 Shader Gradient | 无 |
 | 单个微交互(按钮 / 加载器) | CMP-006 Uiverse | 无 |
 | 找现成现代组件 | CMP-002 21st.dev | CMP-007 OriginKit |
+| 可复制的基础组件体系 | CMP-008 shadcn/ui | CMP-002 21st.dev |
+| 高质量图标集 | CMP-009 Lucide | 无 |
+| 免费商用字体 | CMP-010 Fontshare | 无 |
 | 品牌动效 / 社交视频(不写码) | MOT-001 Jitter | MOT-002 SuperOPC |
 | ASCII / Dither / 故障风视觉 | MOT-002 SuperOPC | MOT-004 Flux Pic |
 | 液态 / 墨滴 Shader 素材 | MOT-004 Flux Pic | CMP-001 Shader Gradient |
 | Lottie 矢量动画 | MOT-005 LottieFiles | MOT-001 导出 |
+| 可交互状态机动效 | MOT-006 Rive | MOT-005 LottieFiles |
+| Web 3D 场景 / 物件 | MOT-007 Spline | CMP-001 Shader Gradient |
 | 设计与代码画布协作 | MOT-003 Paper | SYS-002 Open Design |
 | React 组件级动画 | DEV-001 Motion | 无 |
+| 复杂时间线 / 滚动叙事动画 | DEV-003 GSAP | DEV-001 Motion |
 | 编程式视频流水线 | DEV-002 HyperFrames | MOT-001 Jitter |
 | 真实产品设计系统参考 | SYS-001 Refero Styles | 无 |
+| 真实 App / Web 界面与流程 | SYS-003 Mobbin | SYS-001 Refero Styles |
 | 端到端 AI 设计工作空间 | SYS-002 Open Design | 无 |
 
 ---
@@ -74,7 +84,7 @@ catalog_type: design-resources
 
 - **官网**: https://motionsites.ai
 - **类型**: Prompt / 页面灵感库
-- **用途**: 按 SaaS、Agency、Portfolio、Ecommerce 等��类浏览大量 Premium 落地页与 Hero 模板;另有独立的 Animated Backgrounds 动效背景库
+- **用途**: 按 SaaS、Agency、Portfolio、Ecommerce 等品类浏览大量 Premium 落地页与 Hero 模板;另有独立的 Animated Backgrounds 动效背景库
 - **输入 → 输出**: 浏览或按品类检索 → Hero 构图、整页叙事结构、动态背景方向
 - **是否需写码**: 否(纯参考);标 "Copy" 的模板可复制源码
 - **框架兼容**: 无(参考站,非组件)
@@ -93,7 +103,7 @@ catalog_type: design-resources
 - **框架兼容**: 框架无关(GSAP 原生 JS)
 - **许可证 / 价格**: 免费浏览;GSAP 核心免费,部分插件 Club GreenSock 付费
 - **何时选它**: 要做滚动叙事或复杂时间线动画、需要真实参考时
-- **搭配**: 配 DEV-001 Motion 或 GSAP 落地;配 INS-005 看更高维案例
+- **搭配**: 配 DEV-001 Motion 或 DEV-003 GSAP 落地;配 INS-005 看更高维案例
 - **标签**: `inspiration` `gallery` `animation`
 
 ### INS-003 · Bento Grids
@@ -134,6 +144,45 @@ catalog_type: design-resources
 - **何时选它**: 需要顶级行业标杆、提炼多条案例共同原则时
 - **搭配**: 配 INS-002 看具体动效实现
 - **标签**: `inspiration` `gallery` `motion-design`
+
+### INS-006 · Siteinspire
+
+- **官网**: https://www.siteinspire.com
+- **类型**: 策展型网站灵感画廊
+- **用途**: 按风格、类型、主题筛选高质量网站案例,偏工作室、作品集、品牌与排版向
+- **输入 → 输出**: 按分类 / 风格筛选 → 可收藏的网站案例列表
+- **是否需写码**: 否(纯参考)
+- **框架兼容**: 无
+- **许可证 / 价格**: 免费浏览;收藏等功能可能需注册
+- **何时选它**: 需要比奖项站更偏「可长期收藏」的策展合集、看排版与艺术指导时
+- **搭配**: 配 INS-004 / INS-005 交叉对比;配 CMP-* 落地
+- **标签**: `inspiration` `gallery`
+
+### INS-007 · Design Spells
+
+- **官网**: https://www.designspells.com
+- **类型**: 设计细节 / 微交互灵感库
+- **用途**: 收集「细节像魔法」的界面片段:微交互、过渡、彩蛋、拟物、动态岛等
+- **输入 → 输出**: 按标签浏览 → 具体交互细节与实现灵感
+- **是否需写码**: 否(参考);落地需自行实现
+- **框架兼容**: 无
+- **许可证 / 价格**: 免费浏览
+- **何时选它**: 大结构已定、要打磨按钮 / 过渡 / 趣味细节时
+- **搭配**: 配 CMP-003 / 004 / 006 找可复用实现;配 DEV-001 / DEV-003 写交互
+- **标签**: `inspiration` `gallery` `animation`
+
+### INS-008 · Website Prompts
+
+- **官网**: https://websiteprompts.ai
+- **类型**: Web Prompt 库
+- **用途**: 按行业 / 站点类型浏览完整网页 Prompt,复制后用于 Lovable、Bolt、v0、Claude 等生成落地页
+- **输入 → 输出**: 选品类 → 可复制的整页设计 Prompt
+- **是否需写码**: 否(Prompt 工作流);生成后再视工具改代码
+- **框架兼容**: 取决于下游 AI 建站工具
+- **许可证 / 价格**: 免费复制使用(以官网说明为准)
+- **何时选它**: 要用自然语言直接生成整页、需要现成高质量 Prompt 时
+- **搭配**: 配 INS-001 看更偏动效的结构化 Prompt;生成后用 SYS-* 约束规范
+- **标签**: `inspiration` `prompt`
 
 ---
 
@@ -232,6 +281,45 @@ catalog_type: design-resources
 - **搭配**: 配 CMP-003 / 004 / 005
 - **标签**: `component` `react` `motion-design`
 
+### CMP-008 · shadcn/ui
+
+- **官网**: https://ui.shadcn.com
+- **类型**: 可复制的基础 UI 组件体系
+- **用途**: 以 Radix + Tailwind 为基础,按需复制 Button、Dialog、Form、Data Table 等高质量基础组件,而不是安装整包 npm 依赖
+- **输入 → 输出**: CLI 添加组件 → 项目内可改的 React 组件源码
+- **是否需写码**: 是
+- **框架兼容**: React + Tailwind;支持多个主流框架文档
+- **许可证 / 价格**: 免费(MIT,以官网为准)
+- **何时选它**: 需要可维护的基础组件层、再在其上叠加营销动效组件时
+- **搭配**: 配 CMP-003 / 004 / 005 做高表现力区块;配 CMP-009 图标
+- **标签**: `component` `react`
+
+### CMP-009 · Lucide
+
+- **官网**: https://lucide.dev
+- **类型**: 开源图标集
+- **用途**: 提供风格统一、笔画清晰的 SVG 图标,覆盖 Web / 产品界面常用符号
+- **输入 → 输出**: 搜索图标 → SVG / React / Vue 等组件用法
+- **是否需写码**: 是(嵌入图标);也可导出 SVG
+- **框架兼容**: React / Vue / Svelte / 原生 SVG 等
+- **许可证 / 价格**: 免费(ISC,以官网为准)
+- **何时选它**: 需要一致、现代、可商用的界面图标体系时
+- **搭配**: 配 CMP-008 shadcn/ui;避免同一页混用多种图标风格
+- **标签**: `component` `icon`
+
+### CMP-010 · Fontshare
+
+- **官网**: https://www.fontshare.com
+- **类型**: 免费商用字体库
+- **用途**: 由 Indian Type Foundry 策展的高质量免费字体,适合品牌与产品界面选型
+- **输入 → 输出**: 浏览 / 配对字体 → 下载字体文件或获取使用方式
+- **是否需写码**: 否(选型);上线需接入字体文件或托管
+- **框架兼容**: 无(字体资源)
+- **许可证 / 价格**: 免费商用(以各字体许可证为准)
+- **何时选它**: 需要比系统字体更有辨识度、又要可商用的西文 / 多文体时
+- **搭配**: 配 SYS-001 看真实产品字体搭配;中文项目需另配中文字体方案
+- **标签**: `component` `font`
+
 ---
 
 ## 三、动效设计与视觉制作工具
@@ -303,6 +391,32 @@ catalog_type: design-resources
 - **搭配**: 配 MOT-001 导出 Lottie;配 DEV-001 网页集成
 - **标签**: `lottie` `animation`
 
+### MOT-006 · Rive
+
+- **官网**: https://rive.app
+- **类型**: 交互式状态机动效工具
+- **用途**: 设计可响应状态 / 输入的矢量动效(按钮、图标、角色、加载态),导出到 App 与 Web 运行时
+- **输入 → 输出**: 在编辑器做动画与状态机 → Rive 文件 + 运行时集成
+- **是否需写码**: 设计阶段否;产品集成需写码
+- **框架兼容**: Web / iOS / Android / Flutter / React Native 等(见官网运行时)
+- **许可证 / 价格**: 有免费档;团队与高级能力见官网定价
+- **何时选它**: 需要比 Lottie 更强的交互状态、运行时可控动效时
+- **搭配**: 简单循环动画可先看 MOT-005;网页交接可配 DEV-001
+- **标签**: `motion-design` `animation`
+
+### MOT-007 · Spline
+
+- **官网**: https://spline.design
+- **类型**: Web 3D 设计工具
+- **用途**: 在浏览器中设计 3D 场景与物件,导出到网页或 React 集成
+- **输入 → 输出**: 可视化搭建 3D → 可嵌入的 3D 场景 / 代码集成
+- **是否需写码**: 设计阶段否;深度集成需写码
+- **框架兼容**: Web / React 等导出方式见官网
+- **许可证 / 价格**: 有免费档;付费计划见官网
+- **何时选它**: Hero 或产品展示需要实时 3D、又不想从 Zero 写 Three.js 时
+- **搭配**: 配 CMP-001 做非 3D 的 Shader 渐变;注意性能与移动端兜底
+- **标签**: `motion-design` `3d` `shader`
+
 ---
 
 ## 四、前端动画与视频技术
@@ -319,7 +433,7 @@ catalog_type: design-resources
 - **框架兼容**: React / Vue / 原生(Framer Motion 为 React 版)
 - **许可证 / 价格**: 免费(MIT)
 - **何时选它**: 需要组件级过渡、手势、滚动驱动动画,React 项目首选
-- **搭配**: 配 GSAP 做复杂时间线;配 CMP-* 组件
+- **搭配**: 配 DEV-003 GSAP 做复杂时间线;配 CMP-* 组件
 - **标签**: `animation` `react`
 
 ### DEV-002 · HyperFrames
@@ -332,8 +446,21 @@ catalog_type: design-resources
 - **框架兼容**: Web 标准 + GSAP
 - **许可证 / 价格**: 免费(Apache-2.0,开源)
 - **何时选它**: 需要编程式、可重复渲染的视频流水线,或让 agent 自动产出视频时
-- **搭配**: 配 SYS-002 Open Design 的视频模板
+- **搭配**: 配 SYS-002 Open Design 的视频模板;时间线能力可参考 DEV-003
 - **标签**: `video` `animation`
+
+### DEV-003 · GSAP
+
+- **官网**: https://gsap.com
+- **类型**: 专业级 Web 动画库
+- **用途**: 用 Tween / Timeline / ScrollTrigger 等实现复杂时间线、滚动叙事与高性能网页动画
+- **输入 → 输出**: 编写 GSAP 代码 → 时间线驱动的页面动画
+- **是否需写码**: 是
+- **框架兼容**: 框架无关(原生 JS);可与 React / Vue 等集成
+- **许可证 / 价格**: 核心免费;部分插件需付费订阅(以官网为准)
+- **何时选它**: 滚动叙事、复杂编排、对性能与时间线控制要求高时
+- **搭配**: 先用 INS-002 找案例模式;组件级微交互可优先 DEV-001
+- **标签**: `animation`
 
 ---
 
@@ -367,6 +494,19 @@ catalog_type: design-resources
 - **搭配**: 配 DEV-002 做视频;配 SYS-001 设计系统
 - **标签**: `design-system` `motion-design`
 
+### SYS-003 · Mobbin
+
+- **官网**: https://mobbin.com
+- **类型**: 真实产品 UI / UX 参考库
+- **用途**: 检索 iOS、Web App 与网站的真实界面、组件模式与用户流程;也可通过 MCP 供 AI agent 查阅
+- **输入 → 输出**: 按模式 / 流程 / 截图检索 → 可参考的真实产品界面与流程
+- **是否需写码**: 否(参考);落地需自行设计或实现
+- **框架兼容**: 无
+- **许可证 / 价格**: 有免费浏览限制;Pro / Team 等付费计划见官网
+- **何时选它**: 做产品界面、 onboard / 支付 / 设置等流程,需要看头部 App 怎么做时
+- **搭配**: 配 SYS-001 看设计令牌;配 INS-* 看营销站风格(二者不要混用场景)
+- **标签**: `design-system` `gallery` `design-extraction`
+
 ---
 
 ## 推荐工作流
@@ -382,14 +522,15 @@ catalog_type: design-resources
 ### 2. 从静态视觉到动效
 
 1. 用 `MOT-001` Jitter 或其他 `MOT-*` 工具制作可视化动效素材。
-2. 需要网页交互时使用 `DEV-001` Motion,复杂时间线结合 GSAP(参考 `INS-002` 案例)。
-3. 需要跨端矢量动画时输出 Lottie,并用 `MOT-005` 检查。
-4. 需要视频流水线时选择 `DEV-002` HyperFrames。
+2. 需要网页交互时使用 `DEV-001` Motion;复杂时间线 / 滚动叙事优先 `DEV-003` GSAP(案例可参考 `INS-002`)。
+3. 需要跨端矢量动画时输出 Lottie,并用 `MOT-005` 检查;需要状态机交互动效用 `MOT-006` Rive。
+4. 需要 Web 3D 展示时考虑 `MOT-007` Spline。
+5. 需要视频流水线时选择 `DEV-002` HyperFrames。
 
 ### 3. 从参考网站到设计规范
 
 1. 从多个 `INS-*` 案例提取共同特征。
-2. 用 `SYS-001` 查找接近的真实设计系统。
+2. 用 `SYS-001` 查找接近的真实设计系统;做产品流程时用 `SYS-003` Mobbin。
 3. 整理成结构化规范(色彩 / 字体 / 间距 / 组件)。
 4. 让 AI 按规范自主选择组件,并通过反馈迭代,而不是逐页硬抄。
 
@@ -410,6 +551,7 @@ catalog_type: design-resources
 
 ## 更新记录
 
+- **2026-07-19 · v3.1**:新增 10 条高质量资源,补齐策展灵感、Web Prompt、基础组件、图标字体、Rive / Spline、GSAP、Mobbin 等缺口;决策树与工作流同步更新;修复 MotionSites 用途字段乱码;条目总数 21 → 31。
 - **2026-07-19 · v3.0**:移除原"六、AI 设计与动效 Skills"与"七、Skills 生态与发现目录"共 14 条,使本目录成为纯设计资源库;保留的 21 条资源全量字段化增强(用途 / 输入输出 / 是否写码 / 框架兼容 / 许可证 / 何时选 / 搭配);新增"我要做什么,用哪个"决策树;合并为单文件 README;重写推荐工作流去除 Skill 依赖。
 - **2026-07-14 · v2.0**:重新按任务分类;增加稳定 ID、AI 使用规则、标签词表和贡献规范;加入 Jitter;移除容易过时的数量与绝对化表述。
 - **2026-07-10 · v1.0**:创建初始资源清单。
