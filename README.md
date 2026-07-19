@@ -103,7 +103,7 @@ catalog_type: design-resources
 - **框架兼容**: 框架无关(GSAP 原生 JS)
 - **许可证 / 价格**: 免费浏览;GSAP 核心免费,部分插件 Club GreenSock 付费
 - **何时选它**: 要做滚动叙事或复杂时间线动画、需要真实参考时
-- **搭配**: 配 DEV-001 Motion 或 GSAP 落地;配 INS-005 看更高维案例
+- **搭配**: 配 DEV-001 Motion 或 DEV-003 GSAP 落地;配 INS-005 看更高维案例
 - **标签**: `inspiration` `gallery` `animation`
 
 ### INS-003 · Bento Grids
