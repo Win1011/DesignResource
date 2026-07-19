@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <title>硬切分栏 · 小红书组图</title>
+  <title>AI 的设计灵感库 · 小红书组图</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;500;700;900&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -67,18 +67,15 @@
     }
     .giant .kw { color: #ff5c1a; }
     .giant .soft { color: #f4f1ea; font-weight: 300; }
-
-    /* horizontal title for content pages — still hard-split, not swiss */
     .title-h {
       margin-top: 56px;
-      font-size: 64px;
+      font-size: 58px;
       font-weight: 900;
-      line-height: 1.12;
+      line-height: 1.15;
       letter-spacing: -0.02em;
     }
     .title-h .kw { color: #ff5c1a; }
     .title-h .soft { font-weight: 300; color: #f4f1ea; }
-
     .bottom-copy { margin-top: auto; }
     .bottom-copy p {
       font-size: 22px;
@@ -102,7 +99,6 @@
       font-weight: 500;
       margin-top: 4px;
     }
-
     .shots {
       display: grid;
       grid-template-rows: 1.15fr 0.85fr 1fr;
@@ -131,15 +127,12 @@
       padding: 8px 12px;
       font-weight: 700;
     }
-
-    /* right content well for text pages */
     .well {
       background: #f3f1eb;
       padding: 48px 44px;
       display: flex;
       flex-direction: column;
       min-width: 0;
-      gap: 0;
     }
     .row {
       flex: 1;
@@ -161,7 +154,7 @@
       margin-bottom: 12px;
     }
     .row h3 {
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 900;
       line-height: 1.15;
       color: #111;
@@ -174,36 +167,37 @@
       font-weight: 300;
       max-width: 520px;
     }
-
     .cats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      gap: 14px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      gap: 12px;
       height: 100%;
     }
     .cat {
       background: #111;
       color: #f4f1ea;
-      padding: 28px 24px;
+      padding: 22px 28px;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
     .cat.hi { background: #ff5c1a; color: #111; }
     .cat .code {
-      font-size: 16px;
+      font-size: 18px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       font-weight: 700;
       opacity: 0.7;
+      flex-shrink: 0;
     }
     .cat .name {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 900;
       line-height: 1.2;
+      text-align: right;
     }
-
     .close-well {
       background: #111;
       color: #f4f1ea;
@@ -213,7 +207,7 @@
       justify-content: space-between;
     }
     .close-well .big {
-      font-size: 56px;
+      font-size: 52px;
       font-weight: 900;
       line-height: 1.2;
     }
@@ -224,31 +218,41 @@
     .close-list {
       display: flex;
       flex-direction: column;
-      gap: 28px;
-      margin-top: 48px;
+      gap: 0;
+      margin-top: 40px;
+      flex: 1;
     }
     .close-list .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       border-top: 2px solid rgba(244,241,234,.2);
-      padding-top: 20px;
+      padding: 24px 0;
     }
+    .close-list .item:first-child { border-top: 0; }
     .close-list .item .lab {
       font-size: 16px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #ff5c1a;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .close-list .item .txt {
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 500;
       line-height: 1.35;
     }
+    .close-list .item .txt b {
+      color: #ff5c1a;
+      font-weight: 900;
+    }
     .close-foot {
       margin-top: auto;
-      padding-top: 40px;
-      font-size: 20px;
-      letter-spacing: 0.08em;
+      padding-top: 32px;
+      font-size: 18px;
+      letter-spacing: 0.1em;
       color: rgba(244,241,234,.55);
       text-transform: uppercase;
     }
@@ -265,8 +269,8 @@
         <span class="soft">AI的</span><span class="kw">设计灵感库</span>
       </h1>
       <div class="bottom-copy">
-        <p>告诉 AI<br>该看哪、该用哪</p>
-        <div class="num">36<span>entries</span></div>
+        <p>给人和 AI 都能用的<br>设计资源目录</p>
+        <div class="num">30+<span>resources</span></div>
       </div>
     </aside>
     <div class="shots">
@@ -285,34 +289,34 @@
     </div>
   </section>
 
-  <!-- 02 PROBLEM -->
+  <!-- 02 WHAT -->
   <section class="poster" id="xhs-02">
     <aside class="panel">
       <p class="eyebrow">Design Resource</p>
-      <p class="page-no">02 / Why</p>
+      <p class="page-no">02 / What</p>
       <h2 class="title-h">
-        <span class="soft">AI 做网页</span><br>
-        <span class="kw">常见翻车</span>
+        <span class="soft">一份纯</span><br>
+        <span class="kw">设计资源目录</span>
       </h2>
       <div class="bottom-copy">
-        <p>人能记住站名<br>Agent 需要目录</p>
+        <p>灵感 · 组件 · 动效<br>动画 · 规范</p>
       </div>
     </aside>
     <div class="well">
       <div class="row">
         <div class="idx">01</div>
-        <h3>瞎翻灵感站</h3>
-        <p>打开一堆 Awwwards / Godly，看花眼，仍说不清该参考哪一类。</p>
+        <h3>只收设计相关</h3>
+        <p>灵感站、组件库、动效工具、前端动画、设计规范，不混进别的。</p>
       </div>
       <div class="row">
         <div class="idx">02</div>
-        <h3>类型混着扔</h3>
-        <p>把灵感画廊、组件库、动效工具、Skill 塞进同一句 Prompt。</p>
+        <h3>写清适合做什么</h3>
+        <p>每条都标明用途，以及要不要写代码。</p>
       </div>
       <div class="row">
         <div class="idx">03</div>
-        <h3>没有可调用目录</h3>
-        <p>Agent 需要稳定 ID、分类标签和使用规则，而不是散落链接。</p>
+        <h3>人和 AI 都能用</h3>
+        <p>按分类取用；丢给 AI 时也更清楚该看哪一类。</p>
       </div>
     </div>
   </section>
@@ -323,90 +327,89 @@
       <p class="eyebrow">Design Resource</p>
       <p class="page-no">03 / Map</p>
       <h2 class="title-h">
-        <span class="soft">先选任务</span><br>
-        <span class="kw">再挑资源</span>
+        <span class="soft">五大类</span><br>
+        <span class="kw">按需翻</span>
       </h2>
       <div class="bottom-copy">
-        <p>七类入口<br>不要一把梭</p>
-        <div class="num">36<span>entries</span></div>
+        <p>先选任务<br>再挑资源</p>
+        <div class="num">30+<span>entries</span></div>
       </div>
     </aside>
     <div class="well" style="padding: 36px;">
       <div class="cats">
-        <div class="cat"><span class="code">INS</span><span class="name">设计灵感<br>与案例</span></div>
-        <div class="cat hi"><span class="code">CMP</span><span class="name">UI 组件<br>与视觉</span></div>
-        <div class="cat"><span class="code">MOT</span><span class="name">动效设计<br>工具</span></div>
-        <div class="cat"><span class="code">DEV</span><span class="name">前端动画<br>与视频</span></div>
-        <div class="cat"><span class="code">SYS</span><span class="name">设计规范<br>与参考</span></div>
-        <div class="cat"><span class="code">SKL</span><span class="name">AI 设计<br>Skills</span></div>
+        <div class="cat"><span class="code">INS</span><span class="name">灵感与案例</span></div>
+        <div class="cat hi"><span class="code">CMP</span><span class="name">UI 组件</span></div>
+        <div class="cat"><span class="code">MOT</span><span class="name">动效工具</span></div>
+        <div class="cat"><span class="code">DEV</span><span class="name">前端动画</span></div>
+        <div class="cat"><span class="code">SYS</span><span class="name">设计规范</span></div>
       </div>
     </div>
   </section>
 
-  <!-- 04 WORKFLOW -->
+  <!-- 04 HOW -->
   <section class="poster" id="xhs-04">
     <aside class="panel">
       <p class="eyebrow">Design Resource</p>
-      <p class="page-no">04 / Agent</p>
+      <p class="page-no">04 / How</p>
       <h2 class="title-h">
-        <span class="soft">给 AI</span><br>
-        <span class="kw">三步选型</span>
+        <span class="soft">这样用</span><br>
+        <span class="kw">就行</span>
       </h2>
       <div class="bottom-copy">
-        <p>每次只推<br>1–3 个资源</p>
+        <p>每次挑<br>1–3 个就够</p>
       </div>
     </aside>
     <div class="well">
       <div class="row">
         <div class="idx">Step 01</div>
-        <h3>按目标进分类</h3>
-        <p>先判断是找灵感、找组件、做动效，还是装 Skill。</p>
+        <h3>先想清楚要解决什么</h3>
+        <p>找参考 / 找组件 / 做动效 / 查规范。</p>
       </div>
       <div class="row">
         <div class="idx">Step 02</div>
-        <h3>说明为什么选</h3>
-        <p>写清输入输出、是否要写代码，避免堆一串链接。</p>
+        <h3>进对应分类</h3>
+        <p>挑 1–3 个就够，别一次塞一堆。</p>
       </div>
       <div class="row">
         <div class="idx">Step 03</div>
-        <h3>用稳定 ID 引用</h3>
-        <p>例如 INS-001、MOT-001、SKL-005，方便后续自动化。</p>
+        <h3>打开链接用</h3>
+        <p>要给 AI 时，把分类或条目一起丢过去。</p>
       </div>
     </div>
   </section>
 
-  <!-- 05 TAKEAWAY -->
+  <!-- 05 SUMMARY -->
   <section class="poster" id="xhs-05">
     <aside class="panel">
       <p class="eyebrow">Design Resource</p>
-      <p class="page-no">05 / Save</p>
+      <p class="page-no">05 / When</p>
       <h2 class="title-h">
-        <span class="soft">带走</span><br>
-        <span class="kw">三句话</span>
+        <span class="soft">什么时候</span><br>
+        <span class="kw">打开它</span>
       </h2>
       <div class="bottom-copy">
-        <p>下次直接<br>丢给 AI</p>
+        <p>对上任务<br>再动手</p>
       </div>
     </aside>
     <div class="close-well">
       <div>
-        <p class="big">灵感 ≠ 组件<br>≠ <em>Skill</em></p>
+        <p class="big">不知道去哪找？<br><em>按这个打开。</em></p>
         <div class="close-list">
           <div class="item">
             <div class="lab">01</div>
-            <div class="txt">先分清类型，再让 Agent 动手</div>
+            <div class="txt">不知道网页往哪走 → 看 <b>INS</b></div>
           </div>
           <div class="item">
             <div class="lab">02</div>
-            <div class="txt">目录可被调用：分类 · 标签 · 稳定 ID</div>
+            <div class="txt">缺组件 / 动效 → 看 <b>CMP / MOT</b></div>
           </div>
           <div class="item">
             <div class="lab">03</div>
-            <div class="txt">要 Web Prompt：看 INS-001 / INS-006</div>
+            <div class="txt">要落地动画或规范 → 看 <b>DEV / SYS</b></div>
           </div>
         </div>
       </div>
-      <p class="close-foot">Design Resource · Agent Ready</p>
+      <p class="close-foot">Design Resource · 30+ curated</p>
     </div>
   </section>
 
