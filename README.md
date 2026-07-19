@@ -1,9 +1,9 @@
 ---
 title: 设计、动效与 AI 前端资源目录
-version: "3.1"
+version: "3.2"
 updated_at: "2026-07-19"
 language: zh-CN
-entry_count: 31
+entry_count: 32
 catalog_type: design-resources
 ---
 
@@ -60,6 +60,7 @@ catalog_type: design-resources
 | 可复制的基础组件体系 | CMP-008 shadcn/ui | CMP-002 21st.dev |
 | 高质量图标集 | CMP-009 Lucide | 无 |
 | 免费商用字体 | CMP-010 Fontshare | 无 |
+| 海量字体浏览 / 个人下载 | CMP-011 1001 Free Fonts | CMP-010 Fontshare |
 | 品牌动效 / 社交视频(不写码) | MOT-001 Jitter | MOT-002 SuperOPC |
 | ASCII / Dither / 故障风视觉 | MOT-002 SuperOPC | MOT-004 Flux Pic |
 | 液态 / 墨滴 Shader 素材 | MOT-004 Flux Pic | CMP-001 Shader Gradient |
@@ -320,6 +321,19 @@ catalog_type: design-resources
 - **搭配**: 配 SYS-001 看真实产品字体搭配;中文项目需另配中文字体方案
 - **标签**: `component` `font`
 
+### CMP-011 · 1001 Free Fonts
+
+- **官网**: https://www.1001freefonts.com/
+- **类型**: 免费字体下载库(个人免费)
+- **用途**: 浏览海量分类字体(Comic / Calligraphy / Script / Retro / Horror / Blackletter 等),下载用于个人项目或字体选型参考
+- **输入 → 输出**: 按分类或关键词浏览 → 下载字体文件(zip)
+- **是否需写码**: 否(选型 / 下载)
+- **框架兼容**: 无(字体资源)
+- **许可证 / 价格**: 个人使用免费;**商用需单独购买许可**(每款字体旁有 Buy Commercial License 入口,以官网为准)
+- **何时选它**: 需要大量风格化字体做选型浏览、个人项目或原型时;商用项目优先用 CMP-010 Fontshare
+- **搭配**: 商用选 CMP-010 Fontshare;配 SYS-001 看真实产品字体搭配
+- **标签**: `component` `font`
+
 ---
 
 ## 三、动效设计与视觉制作工具
@@ -551,6 +565,7 @@ catalog_type: design-resources
 
 ## 更新记录
 
+- **2026-07-19 · v3.2**:新增 CMP-011 1001 Free Fonts(海量免费字体下载库,个人免费、商用需购许可),与 CMP-010 Fontshare(免费商用)区分定位;决策树同步加"海量字体浏览 / 个人下载"行;条目总数 31 → 32。
 - **2026-07-19 · v3.1**:新增 10 条高质量资源,补齐策展灵感、Web Prompt、基础组件、图标字体、Rive / Spline、GSAP、Mobbin 等缺口;决策树与工作流同步更新;修复 MotionSites 用途字段乱码;条目总数 21 → 31。
 - **2026-07-19 · v3.0**:移除原"六、AI 设计与动效 Skills"与"七、Skills 生态与发现目录"共 14 条,使本目录成为纯设计资源库;保留的 21 条资源全量字段化增强(用途 / 输入输出 / 是否写码 / 框架兼容 / 许可证 / 何时选 / 搭配);新增"我要做什么,用哪个"决策树;合并为单文件 README;重写推荐工作流去除 Skill 依赖。
 - **2026-07-14 · v2.0**:重新按任务分类;增加稳定 ID、AI 使用规则、标签词表和贡献规范;加入 Jitter;移除容易过时的数量与绝对化表述。
